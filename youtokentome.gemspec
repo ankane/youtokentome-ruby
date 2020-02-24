@@ -3,7 +3,7 @@ require_relative "lib/youtokentome/version"
 Gem::Specification.new do |spec|
   spec.name          = "youtokentome"
   spec.version       = YouTokenToMe::VERSION
-  spec.summary       = "High performance unsupervised text tokenizer for Ruby"
+  spec.summary       = "High performance unsupervised text tokenization for Ruby"
   spec.homepage      = "https://github.com/ankane/youtokentome"
   spec.license       = "MIT"
 

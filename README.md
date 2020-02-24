@@ -1,6 +1,6 @@
 # YouTokenToMe
 
-[YouTokenToMe](https://github.com/VKCOM/YouTokenToMe) - the high performance unsupervised text tokenizer - for Ruby
+[YouTokenToMe](https://github.com/VKCOM/YouTokenToMe) - high performance unsupervised text tokenization - for Ruby
 
 Learn more about [how it works](https://medium.com/@vktech/youtokentome-a-tool-for-quick-text-tokenization-from-the-vk-team-aa6341215c5a)
 
