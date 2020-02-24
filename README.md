@@ -2,6 +2,8 @@
 
 :fire: [YouTokenToMe](https://github.com/VKCOM/YouTokenToMe) - the high performance unsupervised text tokenizer - for Ruby
 
+[![Build Status](https://travis-ci.org/ankane/youtokentome.svg?branch=master)](https://travis-ci.org/ankane/youtokentome)
+
 ## Installation
 
 Add this line to your application’s Gemfile:
