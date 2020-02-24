@@ -1,0 +1,3 @@
+[submodule "vendor/YouTokenToMe"]
+	path = vendor/YouTokenToMe
+	url = https://github.com/VKCOM/YouTokenToMe.git
