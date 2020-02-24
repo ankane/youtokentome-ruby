@@ -1,6 +1,8 @@
 # YouTokenToMe
 
-:fire: [YouTokenToMe](https://github.com/VKCOM/YouTokenToMe) - the high performance unsupervised text tokenizer - for Ruby
+[YouTokenToMe](https://github.com/VKCOM/YouTokenToMe) - the high performance unsupervised text tokenizer - for Ruby
+
+[Learn more](https://medium.com/@vktech/youtokentome-a-tool-for-quick-text-tokenization-from-the-vk-team-aa6341215c5a)
 
 [![Build Status](https://travis-ci.org/ankane/youtokentome.svg?branch=master)](https://travis-ci.org/ankane/youtokentome)
 
