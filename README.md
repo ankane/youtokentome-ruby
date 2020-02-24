@@ -16,6 +16,12 @@ gem 'youtokentome'
 
 ## Getting Started
 
+Dump your text to a file
+
+```txt
+Blazingly fast tokenization!
+```
+
 Train a model
 
 ```ruby
