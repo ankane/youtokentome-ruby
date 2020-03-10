@@ -43,7 +43,7 @@ model.vocab
 Encode
 
 ```ruby
-model.encode(sentence)
+model.encode(sentences)
 ```
 
 Decode
@@ -70,10 +70,10 @@ YouTokenToMe::BPE.train(
   vocab_size: 30000,   # number of tokens in the final vocabulary
   coverage: 1.0,       # fraction of characters covered by the model
   n_threads: -1,       # number of parallel threads used to run
-  pad_id: 1,           # reserved id for padding
-  unk_id: 2,           # reserved id for unknown symbols
-  bos_id: 3,           # reserved id for begin of sentence token
-  eos_id: 4            # reserved id for end of sentence token
+  pad_id: 0,           # reserved id for padding
+  unk_id: 1,           # reserved id for unknown symbols
+  bos_id: 2,           # reserved id for begin of sentence token
+  eos_id: 3            # reserved id for end of sentence token
 )
 ```
 
