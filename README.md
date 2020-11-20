@@ -4,7 +4,7 @@
 
 Learn more about [how it works](https://medium.com/@vktech/youtokentome-a-tool-for-quick-text-tokenization-from-the-vk-team-aa6341215c5a)
 
-[![Build Status](https://travis-ci.org/ankane/youtokentome.svg?branch=master)](https://travis-ci.org/ankane/youtokentome) [![Build status](https://ci.appveyor.com/api/projects/status/35fygi54l4lcp7kp/branch/master?svg=true)](https://ci.appveyor.com/project/ankane/youtokentome/branch/master)
+[![Build Status](https://github.com/ankane/youtokentome/workflows/build/badge.svg?branch=master)](https://github.com/ankane/youtokentome/actions)
 
 ## Installation
 
