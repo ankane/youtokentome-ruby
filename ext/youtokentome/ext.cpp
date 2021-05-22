@@ -7,8 +7,6 @@
 #include <rice/stl.hpp>
 
 using Rice::Array;
-using Rice::Module;
-using Rice::Object;
 
 void check_status(vkcom::Status& status) {
   if (!status.ok()) {
@@ -38,7 +36,7 @@ namespace Rice::detail
   public:
     std::vector<int> convert(VALUE x)
     {
-      Array a = Array(x);
+      auto a = Array(x);
       std::vector<int> ret;
       ret.reserve(a.size());
       for (const auto& v : a) {
@@ -54,7 +52,7 @@ namespace Rice::detail
   public:
     std::vector<std::string> convert(VALUE x)
     {
-      Array a = Array(x);
+      auto a = Array(x);
       std::vector<std::string> ret;
       ret.reserve(a.size());
       for (const auto& v : a) {
