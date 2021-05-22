@@ -6,9 +6,6 @@
 #include <rice/rice.hpp>
 #include <rice/stl.hpp>
 
-using Rice::define_class_under;
-using Rice::define_module;
-using Rice::define_module_under;
 using Rice::Array;
 using Rice::Module;
 using Rice::Object;
@@ -43,8 +40,9 @@ namespace Rice::detail
     {
       Array a = Array(x);
       std::vector<int> ret;
-      for (size_t i = 0; i < a.size(); i++) {
-        ret.push_back(Rice::detail::From_Ruby<int>().convert(a[i].value()));
+      ret.reserve(a.size());
+      for (const auto& v : a) {
+        ret.push_back(From_Ruby<int>().convert(v.value()));
       }
       return ret;
     }
@@ -58,20 +56,23 @@ namespace Rice::detail
     {
       Array a = Array(x);
       std::vector<std::string> ret;
-      for (size_t i = 0; i < a.size(); i++) {
-        ret.push_back(Rice::detail::From_Ruby<std::string>().convert(a[i].value()));
+      ret.reserve(a.size());
+      for (const auto& v : a) {
+        ret.push_back(From_Ruby<std::string>().convert(v.value()));
       }
       return ret;
     }
   };
 }
 
-extern "C" void Init_ext() {
-  Module rb_mYouTokenToMe = define_module("YouTokenToMe");
-  Module rb_mExt = define_module_under(rb_mYouTokenToMe, "Ext")
+extern "C"
+void Init_ext()
+{
+  auto rb_mYouTokenToMe = Rice::define_module("YouTokenToMe");
+  auto rb_mExt = Rice::define_module_under(rb_mYouTokenToMe, "Ext")
     .define_singleton_function(
       "train_bpe",
-      [](const std::string &input_path, const std::string &model_path, int vocab_size, double coverage,
+      [](const std::string& input_path, const std::string& model_path, int vocab_size, double coverage,
           int n_threads, int pad_id, int unk_id, int bos_id, int eos_id) {
 
         vkcom::SpecialTokens special_tokens(pad_id, unk_id, bos_id, eos_id);
@@ -80,7 +81,7 @@ extern "C" void Init_ext() {
         check_status(status);
       });
 
-  define_class_under<vkcom::BaseEncoder>(rb_mExt, "BaseEncoder")
+  Rice::define_class_under<vkcom::BaseEncoder>(rb_mExt, "BaseEncoder")
     .define_method("vocab_size", &vkcom::BaseEncoder::vocab_size)
     .define_method("subword_to_id", &vkcom::BaseEncoder::subword_to_id)
     .define_method(
@@ -140,7 +141,7 @@ extern "C" void Init_ext() {
     .define_method("vocab", &vkcom::BaseEncoder::vocabulary)
     .define_singleton_function(
       "new",
-      [](std::string &model_path, int n_threads) {
+      [](const std::string& model_path, int n_threads) {
         auto status = vkcom::Status();
         vkcom::BaseEncoder encoder(model_path, n_threads, &status);
         check_status(status);
