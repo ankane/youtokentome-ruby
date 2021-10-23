@@ -1,10 +1,10 @@
-# YouTokenToMe
+# YouTokenToMe Ruby
 
 [YouTokenToMe](https://github.com/VKCOM/YouTokenToMe) - high performance unsupervised text tokenization - for Ruby
 
 Learn more about [how it works](https://medium.com/@vktech/youtokentome-a-tool-for-quick-text-tokenization-from-the-vk-team-aa6341215c5a)
 
-[![Build Status](https://github.com/ankane/youtokentome/workflows/build/badge.svg?branch=master)](https://github.com/ankane/youtokentome/actions)
+[![Build Status](https://github.com/ankane/youtokentome-ruby/workflows/build/badge.svg?branch=master)](https://github.com/ankane/youtokentome-ruby/actions)
 
 ## Installation
 
@@ -92,22 +92,22 @@ model.encode(
 
 ## History
 
-View the [changelog](https://github.com/ankane/youtokentome/blob/master/CHANGELOG.md)
+View the [changelog](https://github.com/ankane/youtokentome-ruby/blob/master/CHANGELOG.md)
 
 ## Contributing
 
 Everyone is encouraged to help improve this project. Here are a few ways you can help:
 
-- [Report bugs](https://github.com/ankane/youtokentome/issues)
-- Fix bugs and [submit pull requests](https://github.com/ankane/youtokentome/pulls)
+- [Report bugs](https://github.com/ankane/youtokentome-ruby/issues)
+- Fix bugs and [submit pull requests](https://github.com/ankane/youtokentome-ruby/pulls)
 - Write, clarify, or fix documentation
 - Suggest or add new features
 
 To get started with development:
 
 ```sh
-git clone https://github.com/ankane/youtokentome.git
-cd youtokentome
+git clone https://github.com/ankane/youtokentome-ruby.git
+cd youtokentome-ruby
 bundle install
 bundle exec rake compile
 bundle exec rake test

@@ -4,7 +4,7 @@ Gem::Specification.new do |spec|
   spec.name          = "youtokentome"
   spec.version       = YouTokenToMe::VERSION
   spec.summary       = "High performance unsupervised text tokenization for Ruby"
-  spec.homepage      = "https://github.com/ankane/youtokentome"
+  spec.homepage      = "https://github.com/ankane/youtokentome-ruby"
   spec.license       = "MIT"
 
   spec.author        = "Andrew Kane"
