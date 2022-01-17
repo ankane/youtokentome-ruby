@@ -11,7 +11,7 @@ Learn more about [how it works](https://medium.com/@vktech/youtokentome-a-tool-f
 Add this line to your application’s Gemfile:
 
 ```ruby
-gem 'youtokentome'
+gem "youtokentome"
 ```
 
 ## Getting Started
